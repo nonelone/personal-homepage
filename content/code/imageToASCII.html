@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width"> 
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../include/style.css">
+    <title>imageToASCII</title>
+  </head>
+  <body class="backgroundImg" style="padding: 0; margin-bottom: 0;">
+    <header>
+      <ul class="menu">
+        <li class="menuLi">
+          <a href="../../index.html">
+            <img src="../../assets/home.png" class="resized">
+          </a>
+        </li>
+        <li class="menuLi">
+          <a href="../../content/code.html">
+            <img src="../../assets/code.png"class="resized">
+          </a>
+        </li>
+        <li class="menuLi">
+          <a href="../../content/feedback.html">
+            <img src="../../assets/contact.png"class="resized">
+          </a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <br><br>
+      <h1 class="headerDark">
+        imageToASCII
+      </h1>
+      <div class="backgroundText" style="width: 60%; background-color: #524f4f; margin-top: 5%; margin-bottom: 5%; padding: 5%; font-size: 1.5vw;">
+        imageToASCII to skrypt, który na podstawie podanego mu obrazu, generuje plik tekstowy, który zawiera kopię oryginalnego obrazu stworzoną z podstawowych znakow: ",", ":", "o", "0", "#".<br><br>
+        Jak to działa: proces składa się z kilku kroków: zmniejszenia skali obrazu, zmiany jego kolorystyki na odcienie szarości, a następnie przejście przez wszystkie piksele obrazu i obliczenie ich "wypełnienia", czyli natężenia koloru. W zależności od stopnia wypełnienia, program przypisuje danemu pikselowi konkretny znak - przykładowo wypełnienie w zakresie 40-60% to "o", a 80-100% to "#"<br><br>
+        Uwagi: obraz zawarty w pliku tekstowym jest ciężki do zobaczenia - często będzie składał się on z tysięcy znaków, co może sprawiać problemy z niektórymi programami. Dodatkowo obrazy wyprodukowane przez ten skrypt będą wydawać się znacznie węższe niż powinny być - wynika to z faktu, że użyte przez niego znaki nie są kwadratowe, a prostokatne - wysokość linijki jest większa od szerokości kropki która się w niej znajduje.<br><br>
+        Treść programu jest objęta licencją MIT. Program wykorzystuje bibliotekę PIL. <br><br>Napisany w Pythonie.
+      </div>
+    </main>
+    <footer>
+      <ul id="footerList">
+        <li>
+          <a href="../copyrights.html">
+            Licencje &copy;
+          </a>
+        </li>
+        <li>
+          <a href="../privacy.html">
+            Polityka Prywatności
+          </a>
+        </li>
+        <li>
+          <a href="../contact.html">
+            Skontaktuj się z nami
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

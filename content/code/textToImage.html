@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width"> 
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../../include/style.css">
+  <title>textToImage</title>
+</head>
+<body class="backgroundImg" style="padding: 0; margin-bottom: 0;">
+  <header>
+    <ul class="menu">
+      <li class="menuLi">
+        <a href="../../index.html">
+          <img src="../../assets/home.png" class="resized">
+        </a>
+      </li>
+      <li class="menuLi">
+        <a href="../../content/code.html">
+          <img src="../../assets/code.png"class="resized">
+        </a>
+      </li>
+      <li class="menuLi">
+        <a href="../../content/feedback.html">
+          <img src="../../assets/contact.png"class="resized">
+        </a>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <br><br>
+    <h1 class="headerDark">
+      textToImage
+    </h1>
+    <div class="backgroundText" style="width: 60%; background-color: #524f4f; margin-top: 5%; margin-bottom: 5%; padding: 5%; font-size: 1.5vw;">
+        textToImage jest to skrypt napisany w Pythonie, który pozwala na szybką zmianę bloku tekstu (złożonego z konkretnych znaków) w plik .png. Dzięki temu ten sam obraz stworzony ze znaków ASCII staje wygodniejszy do użytku (np jako zdjęcie profilowe), obróbki graficznej, itd. Naprawia on też wizualny błąd występujący w skrypcie imageToASCII - z racji, że dowolny znak jest wyższy niż szerszy, obraz stworzony wyłącznie ze znaków ASCII wydaje się znacznie węższy, mimo, że każdy piksel obrazu jest odwzorowany w tekscie. textToImage komponuje obraz z mniejszych obrazków (przedstawiających każdy znak ASCII napotkany w tekście do obróbki), w których ten znak znajduje się w środku. Dzięki temu obraz końcowy zachowuje proporcje oryginalnego obrazu. Napisany w Pythonie z wykorzystaniem biblioteki PIL
+    </div>
+  </main>
+  <footer>
+    <ul id="footerList">
+      <li>
+        <a href="../copyrights.html">
+          Licencje &copy;
+        </a>
+      </li>
+      <li>
+        <a href="../privacy.html">
+          Polityka Prywatności
+        </a>
+      </li>
+      <li>
+        <a href="../contact.html">
+          Skontaktuj się z nami
+        </a>
+      </li>
+    </ul>
+  </footer>
+</body>
+</html>

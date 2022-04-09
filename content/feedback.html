@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width"> 
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../include/style.css">
+    <script src="../include/jquery.js"></script>
+    <script>
+      var _capatchaText = "";
+      
+      function verify(){
+          var inputToVerify = document.getElementById('capatchaInput').value;
+          if(inputToVerify != _capatchaText){
+              alert("Nie można zweryfikować! Spróbuj ponownie!");
+          }
+          else {
+            console.log("yass");
+              var radios = document.querySelectorAll('input[name="stars"]');
+              for (element of radios) {
+                  if (element.checked) {
+                      ratingValue = element.value;
+                      break;
+                  }
+              }
+              var answer = "Twoja ocena to: " + ratingValue + ". Dziękujemy za przesłanie opini.";
+              alert(answer);
+          }
+          _capatchaText = "";
+      }
+
+      function generateRandom(min, max){
+        return Math.floor(Math.random() * (max - min) + min);
+      }
+      function generateCapatcha(){
+        var len = 52;
+        var letters = ['a','A','b','B','c','C','d','D','e','E','f','F','g','G','h','H','i','I','j','J','k','K','l','L','m','M','n','N','o','O','p','P','q','Q','r','R','s','S','t','T','u','U','v','V','w','W','x','X','y','Y','z','Y'];
+        var _textLen = generateRandom(3,7);
+        for(i = 0; i < _textLen; i++){
+          _capatchaText = _capatchaText + letters[generateRandom(0,53)];
+        }
+        var _canvas = document.getElementById("capatcha");
+        var _cursor = _canvas.getContext("2d");
+        _cursor.fillStyle = "red";
+        _cursor.textAlign = "center";
+        _cursor.font = "100px Arial";
+        _cursor.fillText(_capatchaText, _canvas.width/2, _canvas.height/2);
+      }
+    </script>
+    <title>Informacja zwrotna</title>
+  </head>
+  <body class="backgroundImg" style="padding: 0; margin-bottom: 0;" onload="generateCapatcha()">
+    <header>
+      <ul class="menu">
+        <li class="menuLi">
+          <a href="../index.html">
+            <img src="../assets/home.png" class="resized">
+          </a>
+        </li>
+        <li class="menuLi">
+          <a href="../content/code.html">
+            <img src="../assets/code.png"class="resized">
+          </a>
+        </li>
+        </li>
+        <li class="menuLi">
+        <a href="../content/feedback.html">
+            <img src="../assets/contact.png"class="resized">
+        </a>
+        </li>
+      </ul>
+    </header>
+    <main>
+        <div class="intro">
+            <br>
+            <h1>Informaca zwrotna</h1>
+            <h2>Podziel się z nami swoją opinią na temat mojej strony:</h2>
+            <h2>Wybierz na jaką ocenę (1 - najgorsza, 5 - najlesza) oceniasz moją stronę</h2>
+            <br>
+            <form autocomplete="off" onsubmit="verify();">
+            <input type="radio" id="star1" value="1" name="stars" required>
+            <label for="star1">1</label>
+            <input type="radio" id="star2" value="2" name="stars" required>
+            <label for="star2">2</label>
+            <input type="radio" id="star3" value="3" name="stars" required>
+            <label for="star3">3</label>
+            <input type="radio" id="star4" value="4" name="stars" required>
+            <label for="star4">4</label>
+            <input type="radio" id="star5" value="5" name="stars" required>
+            <label for="star5">5</label>
+            
+            <br><br>
+            <h2>Przepisz poniższy tekst, aby udowodnić, że jesteś człowiekiem:</h2>
+            <!-- Tu początkowo był wcześniej wygenerowany obraz svg, ale stwierdziłem że wolę zaimplementować losową capatchę za pomocą JS
+            <svg height="220" width="800">
+                <polyline points="20,20, 20,180 60,100, 80, 180" style="fill: none;stroke:white;stroke-width:5" /> 
+                <polyline points="100,100, 120,180 140,100" style="fill: none;stroke:white;stroke-width:5" /> 
+                <polyline points="140,180, 160,100 180,180 200,100 220,180" style="fill: none;stroke:white;stroke-width:5" /> 
+                <polyline points="230,180, 250,100 270,180 242,140" style="fill: none;stroke:white;stroke-width:5" /> 
+                <polyline points="275,180, 275,100, 310,180 310,100" style="fill: none;stroke:white;stroke-width:5" /> 
+
+                <polyline points="390,180, 350,140 390,100 350,140 390,140" style="fill: none;stroke:white;stroke-width:5" />
+                <polyline points="410,180 410,100 450,140 410,140, 450,180" style="fill: none;stroke:white;stroke-width:5" /> 
+                <polyline points="470,180 470,100 510,140 470,140, 510,180" style="fill: none;stroke:white;stroke-width:5" />
+                <polyline points="530,140 570,100 610,140 570,180 530,140" style="fill: none;stroke:white;stroke-width:5" />
+                <polyline points="630,180 630,100, 670,140 630,140 670,180" style="fill: none;stroke:white;stroke-width:5" />
+                <polyline points="690,180 690,170" style="fill: none;stroke:white;stroke-width:7" />
+                <polyline points="690,160 690,20" style="fill: none;stroke:white;stroke-width:7" />
+            </svg>
+            -->
+            <canvas id="capatcha" width="600" height="300"></canvas>
+            <br>
+            <input type="text" id="capatchaInput" required>
+            <br>
+            <br>
+            <button type="submit">Zatwierdź</button>
+            <button type="reset">Anuluj</button>
+            </form>
+          </div>
+    </main>
+    <footer>
+      <ul id="footerList">
+        <li>
+          <a href="copyrights.html">
+            Licencje &copy;
+          </a>
+        </li>
+        <li>
+          <a href="privacy.html">
+            Polityka Prywatności
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">
+            Skontaktuj się z nami
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="include/style.css">
+  <script src="include/jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#hUJOT").click(function(){
+        $("#bUJOT").slideToggle("slow");
+      });
+    });
+    $(document).ready(function(){
+      $("#hITA").click(function(){
+        $("#bITA").slideToggle("slow");
+      });
+    });
+    $(document).ready(function(){
+      $("#hTTI").click(function(){
+        $("#bTTI").slideToggle("slow");
+      });
+    });
+  </script>
+  <title>CodeHub</title>
+</head>
+
+<body class="backgroundImg" style="padding: 0; margin-bottom: 0;">
+  <header>
+    <ul class="menu">
+      <li>
+        <a href="index.html">
+          <img src="assets/home.png" class="resized">
+        </a>
+      </li>
+      <li class="menu">
+        <a href="content/code.html">
+          <img src="assets/code.png" class="resized">
+        </a>
+      </li>
+      <li class="menu">
+        <a href="content/feedback.html">
+          <img src="assets/contact.png" class="resized">
+        </a>
+      </li>
+    </ul>
+  </header>
+  <main style="padding-top: 5%;">
+    <div class="backgroundText">
+      Witaj na stronie główej CodeHub, repozytorium napisanych przeze mnie programów.<br>
+      Wszystkie programy opisane na tej stronie są udostępniane jako Wolne Oprogramowanie (dokładny opis znajdziesz w <a href="content/copyrights.html">Licencje &copy;</a>).<br>
+      <p style="text-align: center;">
+        Wykorzystane technologie:
+      </p>
+      <ul class="introList">
+        <li style="display: inline-flex;">
+          <a href="content/code.html#python">
+            <img src="assets/python.png" alt="python" style="width: 90%;">
+          </a>
+        </li>
+        <li style="display: inline-flex;">
+          <a href="content/code.html#web">
+            <img src="assets/web.png" alt="web" style="width: 90%;">
+          </a>
+        </li>
+        <li style="display: inline-flex;">
+          <a href="content/code.html#c">
+            <img src="assets/c.png" alt="c" style="width: 90%;">
+          </a>
+        </li>
+        <li style="display: inline-flex;">
+          <a href="content/code.html#js">
+            <img src="assets/js.png" alt="javascript" style="width: 90%;">
+          </a>
+        </li>
+        <li style="display: inline-flex;">
+          <a href="content/code.html#kotlin">
+            <img src="assets/kotlin.png" alt="kotlin" style="width: 90%;">
+          </a>
+        </li>
+        <li style="display: inline-flex;">
+          <a href="content/code.html#flutter">
+            <img src="assets/flutter.png" alt="flutter" style="width: 90%;">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <br><br>
+    <h2 class="headerDark">O mnie:</h2>
+    <div class="intro">
+      <a href="content/contact.html">
+        <img src="assets/face.png" class="faceImage" alt="Moje stylizowane zdjęcie">
+        <br>
+        <h1>Nazywam się Filip Panek i jestem autorem tej strony. Jestem studentem Uniwersytetu Jagiellońskiego, na
+          Wydziale Zarządzania I Komunikacji Społecznej. Lubię programować, robię to głównie w Pythonie, chociaż do
+          niektórych projektów używam także innych języków, np C, języki JVM, czy - np do napisania tej strony - języki
+          Internetu.</h1>
+      </a>
+    </div>
+    <div class="gallery">
+      <h1>Spis programów</h1>
+      <h2>Kliknij na nazwę wybranego programu, aby dowiedzieć się więcej</h2>
+      <h4 id="hITA">ImageToASCII</h4>
+      <a href="content/code/imageToASCII.html" class="galleryEntry" id="bITA" style="display: none;">
+        <p>
+          ImageToASCII to krótki skrypt wykonany w Pythonie, który za pomocą rozbudowanej bilbioteki PIL zmienia podany
+          obraz w ciąg znaków składający się z ".", ":", "o", "0" i "#" w taki sposób, że przypomina on pierwotny obraz.
+        </p>
+        <table>
+          <tr>
+            <th colspan="2">Nazwa i identyfikator</th>
+            <th>Wersja</th>
+            <th>Licencje</th>
+            <th colspan="2">Język i frameworki</th>
+          </tr>
+          <tr>
+            <td>imageToASCII</td>
+            <td>org.panek.python.imageToAscii</td>
+            <td>1.0</td>
+            <td>MIT</td>
+            <td>Python</td>
+            <td>PIL</td>
+          </tr>
+        </table>
+      </a>
+      <h4 id="hTTI">textToImage</h4>
+      <a href="content/code/textToImage.html" class="galleryEntry" id="bTTI" style="display: none;">
+        <p>
+          TextToImage to skrypt o działaniu odwrotnym do ImageToASCII, który zmnienia plik tekstowy (składający się ze
+          znaków ",", ":", "o", "0", "#") w czarno-biały obraz.
+        </p>
+        <table>
+          <tr>
+            <th colspan="2">Nazwa i identyfikator</th>
+            <th>Wersja</th>
+            <th>Licencje</th>
+            <th colspan="2">Język i frameworki</th>
+          </tr>
+          <tr>
+            <td>textToImage</td>
+            <td>org.panek.python.textToImage</td>
+            <td>1.0</td>
+            <td>MIT</td>
+            <td>Python</td>
+            <td>PIL</td>
+          </tr>
+        </table>
+      </a>
+      <h4 id="hUJOT">UJOT.FM</h4>
+      <a href="content/code/ujot.fm.html" class="galleryEntry" id="bUJOT" style="display: none;">
+        <p>
+          UJOT.FM to prototyp aplikacji mobilnej (docelowo na Androida i iOS-a) służącej do odtwarzania radia studenckiego UJOT.FM
+        </p>
+        <table>
+          <tr>
+            <th colspan="2">Nazwa i identyfikator</th>
+            <th>Wersja</th>
+            <th>Licencje</th>
+            <th colspan="2">Język i frameworki</th>
+          </tr>
+          <tr>
+            <td>imageToASCII</td>
+            <td>fm.ujot.mobile.app</td>
+            <td>prealpha</td>
+            <td>to be decided</td>
+            <td>Dart</td>
+            <td>Flutter, just_audio</td>
+          </tr>
+        </table>
+      </a>
+    </div>
+  </main>
+  <footer>
+    <ul id="footerList">
+      <li>
+        <a href="content/copyrights.html">
+          Licencje &copy;
+        </a>
+      </li>
+      <li>
+        <a href="content/privacy.html">
+          Polityka Prywatności
+        </a>
+      </li>
+      <li>
+        <a href="content/contact.html">
+          Skontaktuj się z nami
+        </a>
+      </li>
+    </ul>
+  </footer>
+</body>
+
+</html>
